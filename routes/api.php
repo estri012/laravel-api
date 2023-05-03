@@ -18,3 +18,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::post('/v1/posts/store', 'api\v1\PostsController@store');
 Route::get('/v1/posts', 'api\v1\PostsController@index');
+Route::get('/v1/posts/{id?}', 'api\v1\PostsController@show');
+Route::post('/v1/posts/update', 'api\v1\PostsController@update');
+Route::delete('v1/posts/{id?}', 'api\v1\PostsController@destroy');
